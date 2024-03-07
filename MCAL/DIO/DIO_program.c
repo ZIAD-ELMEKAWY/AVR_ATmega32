@@ -11,7 +11,7 @@
 #include "DIO_private.h"
 #include "DIO_config.h"
 
-/*********** Global variable Section *******************/
+/*********** Global variable Section ********************/
 
 /*********** Function Definition Section *******************/
 DIO_ErrorStatus DIO_enum_SetPinDirection  (u8 Copy_u8PORT , u8 Copy_u8PiN , u8 Copy_u8_Direction)
