@@ -9,7 +9,7 @@
 #ifndef DIO_INTERFACE_H_
 #define DIO_INTERFACE_H_
 
-/*********** Includes Section *******************/
+/*********** Includes Section ********************/
 #include "Math.h"
 #include "Std_Types.h"
 /*********** Macro Function Declaration Section *******************/
