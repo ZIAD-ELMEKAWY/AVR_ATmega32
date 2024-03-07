@@ -10,7 +10,7 @@
 #define DIO_PRIVATE_H_
 #include "Std_Types.h"
 
-/******** GROUP A ******************/
+/******** GROUP A *******************/
 #define PORTA_Register	*((volatile u8*)0x3B) 
 #define DDRA_Register	*((volatile u8*)0x3A)
 #define PINA_Register	*((volatile u8*)0x39)
