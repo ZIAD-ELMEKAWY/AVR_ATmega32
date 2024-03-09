@@ -27,8 +27,10 @@ int main(void)
 			SSD_Write(SSD_PORTC , I);
 			for (J=0 ; J<=9 ; J++)
 			{
+				//while (!(SW_u8GetPressed(SW1)));           /* تستخدم عندما يكون كل ضغطة علي الزر يقوم بالعد & تسستخدم مع اللي زيها تحت مع بعض  */
 				SSD_Write(SSD_PORTD , J);
 				_delay_ms(100);
+				while (SW_u8GetPressed(SW1));                /* دي لوحدها بتوقف العد لما بيكون الزر مضغوط */
 			}
 		}
     }
