@@ -1,0 +1,100 @@
+/*
+ * main.c
+ *
+ * Created: 05/03/2024 23:05:51
+ * Author : ziad
+ */ 
+
+#include "APPLICATION/Application.h"
+
+u8 KPD_PRESS  = 0 ;
+u8 KPD_VAR_PRESS = 0 ;
+	/*<<<<<<<<<<<<<<< Additional switches >>>>>>>>>>>>>>*/
+SW_type SW_Shift_R = {DIO_PORTD , DIO_PIN0 , SW_EXT_PULL_UP};
+SW_type SW_Shift_L = {DIO_PORTD , DIO_PIN1 , SW_EXT_PULL_UP};
+SW_type SW_AND     = {DIO_PORTD , DIO_PIN4 , SW_EXT_PULL_UP};
+SW_type SW_OR	   = {DIO_PORTD , DIO_PIN5 , SW_EXT_PULL_UP};
+SW_type SW_COS     = {DIO_PORTD , DIO_PIN6 , SW_EXT_PULL_UP};
+SW_type SW_SIN	   = {DIO_PORTD , DIO_PIN7 , SW_EXT_PULL_UP};
+SW_type SW_EXP	   = {DIO_PORTB , DIO_PIN4 , SW_EXT_PULL_UP};
+SW_type SW_LOG	   = {DIO_PORTB , DIO_PIN5 , SW_EXT_PULL_UP};
+
+SW_type SW_STAND   = {DIO_PORTD , DIO_PIN2 , SW_EXT_PULL_UP};
+SW_type SW_SCIEN   = {DIO_PORTB , DIO_PIN2 , SW_EXT_PULL_UP};
+SW_type SW_PROGR   = {DIO_PORTD , DIO_PIN3 , SW_EXT_PULL_UP};
+
+int main(void)
+{
+	APP_voidInit();
+	SW_voidInit(SW_Shift_R);
+	SW_voidInit(SW_Shift_L);
+	SW_voidInit(SW_AND);
+	SW_voidInit(SW_OR );
+	SW_voidInit(SW_COS);
+	SW_voidInit(SW_SIN);
+	SW_voidInit(SW_EXP);
+	SW_voidInit(SW_LOG);
+	SW_voidInit(SW_STAND);
+	SW_voidInit(SW_SCIEN);
+	SW_voidInit(SW_PROGR);
+	
+	u8 counter =0 ;
+	u8 var1[3] = {0};
+	s32 var1_Res = 0 ;
+	
+	while (1) 
+    {
+		KPD_PRESS = KPD_u8GetPressed() ;
+		/* <<<<<<<<<<<<<<<<<<<<<< Programmable_System >>>>>>>>>>>>>>>>>>>>>> */
+		if (KPD_PRESS != 0xff || (SW_u8GetPressed(SW_Shift_R)==1) || (SW_u8GetPressed(SW_Shift_L)==1) || (SW_u8GetPressed(SW_AND)==1) || (SW_u8GetPressed(SW_OR)==1))
+		{
+			if ((KPD_PRESS >= '0') && (KPD_PRESS <= '9'))
+			{
+				APP_voidProgSys	(KPD_PRESS);
+			}
+			else if (SW_u8GetPressed(SW_Shift_R)==1)
+			{
+				APP_voidProgSys('>');
+			}
+			else if (SW_u8GetPressed(SW_Shift_L)==1)
+			{
+				APP_voidProgSys('<');
+			}
+			else if (SW_u8GetPressed(SW_AND)==1)
+			{
+				APP_voidProgSys('&');
+			}
+			else if (SW_u8GetPressed(SW_OR)==1)
+			{
+				APP_voidProgSys('|');
+			}
+			else if (KPD_PRESS == '=')
+			{
+				APP_voidProgSys('=');
+			}
+			else if (KPD_PRESS == '?')
+			{
+				APP_voidProgSys('?');
+			}
+			else
+			{
+				CLCD_VoidSendString("Error");
+				_delay_ms(150);
+				CLCD_voidClearScreen();
+			}
+		}
+		/* <<<<<<<<<<<<<<<<<<<<<< Programmable_System >>>>>>>>>>>>>>>>>>>>>> */
+    }
+}
+
+/*
+// <<<<<<<<<<<<<<<<<<<<<< Standard_System >>>>>>>>>>>>>>>>>>>>>> 
+while (1)
+{
+	KPD_PRESS = KPD_u8GetPressed();
+	if (KPD_PRESS!=0xff)
+	{
+		APP_voidStandSys(KPD_PRESS);
+	}
+}
+*/
