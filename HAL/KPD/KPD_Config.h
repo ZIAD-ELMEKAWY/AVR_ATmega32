@@ -1,45 +1,37 @@
 /*
- * KPD_config.h
- *
- * Created: 18/03/2024 02:26:17
- *  Author: hp
- */ 
+ * @name 	KPD_Config.h
+ * @date  	Created on: 21/7/2025
+ * @author  Ziad Elmakawy
+ */
+#ifndef HAL_KPD_KPD_CONFIG_H_
+#define HAL_KPD_KPD_CONFIG_H_
 
 
-#ifndef KPD_CONFIG_H_
-#define KPD_CONFIG_H_
-
-/*********** Includes Section *******************/
-#define F_CPU 8000000UL
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< Includes >>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+#include "../../DIO/DIO_Interface.h"
 #include <util/delay.h>
-#include "Std_Types.h"
-#include "DIO_interface.h"
+/* <<<<<<<<<<<<<<<<<<<<< Macro Declaration >>>>>>>>>>>>>>>>>>>>>> */
+#define KPD_ROW_INIT		PIN0
+#define KPD_ROW_END		PIN3
+#define KPD_COL_INIT		PIN4
+#define KPD_COL_END		PIN7
 
-/*********** Macro Function Declaration Section *******************/
-/**************** Macro Declaration Section ***********************/
-#define KPD_ROW_INIT	DIO_PIN0
-#define KPD_ROW_END		DIO_PIN3
-#define KPD_COL_INIT	DIO_PIN4
-#define KPD_COL_END		DIO_PIN7
+#define KPD_PORT		_PORTD_
 
-#define KPD_PORT		DIO_PORTC
+#define KPD_ROW1		PIN0
+#define KPD_ROW2		PIN1
+#define KPD_ROW3		PIN2
+#define KPD_ROW4		PIN3
 
-#define KPD_ROW1		DIO_PIN0
-#define KPD_ROW2		DIO_PIN1
-#define KPD_ROW3		DIO_PIN2
-#define KPD_ROW4		DIO_PIN3
+#define KPD_COL1		PIN4
+#define KPD_COL2		PIN5
+#define KPD_COL3		PIN6
+#define KPD_COL4		PIN7
+/* <<<<<<<<<<<<<<<<<<<<< Macro Function   >>>>>>>>>>>>>>>>>>>>>>>  */
 
-#define KPD_COL1		DIO_PIN4
-#define KPD_COL2		DIO_PIN5
-#define KPD_COL3		DIO_PIN6
-#define KPD_COL4		DIO_PIN7
+/* <<<<<<<<<<<<<<<<<<<<<<< Data Types   >>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 
-/************** Data Types Declaration Section ********************/
-
-/************** Variable Section ********************/
-
-/*************** Function Declaration Section *********************/
+/* <<<<<<<<<<<<<<<<< User Interface Declaration >>>>>>>>>>>>>>> */
 
 
-
-#endif /* KPD_CONFIG_H_ */
+#endif /* HAL_KPD_KPD_CONFIG_H_ */

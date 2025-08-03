@@ -1,34 +1,70 @@
 /*
- * LCD_config.h
- * Layer   : HAL
- * SWC	   : LCD
- * Author  : Ziad
- * Created: 14/03/2024 12:38:38
- */ 
+ * @name 	LCD_Config.h
+ * @date  	Created on: 20/7/2025
+ * @author  Ziad Elmekawy
+ */
+
+#ifndef HAL_LCD_LCD_CONFIG_H_
+#define HAL_LCD_LCD_CONFIG_H_
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< Includes >>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+#include "../../DIO/DIO_Interface.h"
+/* <<<<<<<<<<<<<<<<<<<<< Macro Declaration >>>>>>>>>>>>>>>>>>>>>> */
+/*
+
+###########  8 Bits Mode
+ -----------                   ----------
+ | ATmega32  |                 |   LCD    |
+ |           |                 |          |
+ |        PA7|---------------->|D7        |
+ |        PA6|---------------->|D6        |
+ |        PA5|---------------->|D5        |
+ |        PA4|---------------->|D4        |
+ |        PA3|---------------->|D3        |
+ |        PA2|---------------->|D2        |
+ |        PA1|---------------->|D1        |
+ |        PA0|---------------->|D0        |
+ |           |                 |          |
+ |        PC2|---------------->|E         |
+ |        PC1|---------------->|RW        |
+ |        PC0|---------------->|RS        |
+ -----------                   ----------
+ */
+/*
+
+###########  4 Bits Mode
+ -----------                   ----------
+ | ATmega32  |                 |   LCD    |
+ |           |                 |          |
+ |        PA7|---------------->|D7        |
+ |        PA6|---------------->|D6        |
+ |        PA5|---------------->|D5        |
+ |        PA4|---------------->|D4        |
+ |        		 |---------------->|D3        |
+ |              |---------------->|D2        |
+ |       		 |---------------->|D1        |
+ |              |---------------->|D0        |
+ |           |                 |          |
+ |        PC3|---------------->|E         |
+ |       GND|---------------->|RW        |
+ |        PC2|---------------->|RS        |
+ -----------                   ----------
+ */
+#define LCD_MODE 	8
+
+#define LCD_DATA_PORT 					_PORTC_
+#define LCD_CONTROL_PORT				_PORTD_
+#define LCD_RS		PIN0
+#define LCD_EN		PIN1
 
 
-#ifndef LCD_CONFIG_H_
-#define LCD_CONFIG_H_
 
-/*********** Includes Section *******************/
-#include "DIO_interface.h"
+/* <<<<<<<<<<<<<<<<<<<<< Macro Function   >>>>>>>>>>>>>>>>>>>>>>>  */
 
-/*********** Macro Function Declaration Section *******************/
-/**************** Macro Declaration Section ***********************/
-#define CLCD_MODE  8
+/* <<<<<<<<<<<<<<<<<<<<<<< Data Types   >>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 
-#define CLCD_DATA_PORT      DIO_PORTA
-
-/* RS,RW,EN */
-#define CLCD_CONTROL_PORT   DIO_PORTB
-/* the importance of this thing to make your code more readable & change ports and pins easily */
-#define CLCD_RS             DIO_PIN0
-#define CLCD_RW             DIO_PIN1
-#define CLCD_EN             DIO_PIN3
-/************** Data Types Declaration Section ********************/
-
-/*************** Function Declaration Section *********************/
+/* <<<<<<<<<<<<<<<<< User Interface Declaration >>>>>>>>>>>>>>> */
 
 
 
-#endif /* LCD_CONFIG_H_ */
+#endif /* HAL_LCD_LCD_CONFIG_H_ */

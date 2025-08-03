@@ -1,24 +1,21 @@
 /*
- * KPD_private.h
- *
- * Created: 18/03/2024 02:26:37
- *  Author: hp
- */ 
+ * @name 	KPD_Private.h
+ * @date  	Created on: 21/7/2025
+ * @author  Ziad Elmakawy
+ */
+
+#ifndef HAL_KPD_KPD_PRIVATE_H_
+#define HAL_KPD_KPD_PRIVATE_H_
 
 
-#ifndef KPD_PRIVATE_H_
-#define KPD_PRIVATE_H_
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< Includes >>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-/*********** Includes Section *******************/
+/* <<<<<<<<<<<<<<<<<<<<< Macro Declaration >>>>>>>>>>>>>>>>>>>>>> */
 
+/* <<<<<<<<<<<<<<<<<<<<< Macro Function   >>>>>>>>>>>>>>>>>>>>>>>  */
 
-/*********** Macro Function Declaration Section *******************/
-/**************** Macro Declaration Section ***********************/
+/* <<<<<<<<<<<<<<<<<<<<<<< Data Types   >>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 
-/************** Data Types Declaration Section ********************/
+/* <<<<<<<<<<<<<<<<< User Interface Declaration >>>>>>>>>>>>>>> */
 
-/*************** Function Declaration Section *********************/
-
-
-
-#endif /* KPD_PRIVATE_H_ */
+#endif /* HAL_KPD_KPD_PRIVATE_H_ */

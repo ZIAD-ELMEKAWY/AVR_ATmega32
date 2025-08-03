@@ -1,25 +1,13 @@
 /*
- * LCD_private.h
- * Layer   : HAL
- * SWC	   : LCD
- * Author  : Ziad
- * Created: 14/03/2024 12:38:23
- */ 
+ * @name 	LCD_Private.h
+ * @date  	Created on: 20/7/2025
+ * @folder   Graduation Project
+ * @author   Ziad Elmekawy
+ */
 
+#ifndef HAL_LCD_LCD_PRIVATE_H_
+#define HAL_LCD_LCD_PRIVATE_H_
 
-#ifndef LCD_PRIVATE_H_
-#define LCD_PRIVATE_H_
+static void LCD_voidSendFallingEdge    (void);
 
-/*********** Includes Section *******************/
-
-
-/*********** Macro Function Declaration Section *******************/
-/**************** Macro Declaration Section ***********************/
-
-/************** Data Types Declaration Section ********************/
-
-/*************** Function Declaration Section *********************/
-static void CLCD_voidSendFallingEdge    (void);
-
-
-#endif /* LCD_PRIVATE_H_ */
+#endif /* HAL_LCD_LCD_PRIVATE_H_ */
