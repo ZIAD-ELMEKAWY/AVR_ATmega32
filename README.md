@@ -4,19 +4,25 @@ This repository contains various projects and code examples developed for the AV
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+-   [Overview](#overview)
+-   [Features](#features)
+-   [Project List](#project-list)
+-   [Demos & Screenshots](#demos--screenshots)
+-   [Getting Started](#getting-started)
+    -   [Prerequisites](#prerequisites)
+    -   [Installation](#installation)
+-   [Usage](#usage)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Contact](#contact)
+
+---
 
 ## Overview
 
 The `AVR_ATmega32` repository is dedicated to projects built around the Atmel (now Microchip) ATmega32 microcontroller. This MCU is widely used in embedded systems due to its versatility, rich set of peripherals, and ease of programming. This collection aims to provide practical examples and solutions for common embedded programming tasks, ranging from basic I/O operations to more complex peripheral interactions.
+
+---
 
 ## Features
 
@@ -31,6 +37,71 @@ While specific features will vary by project, common functionalities you might f
 -   **EEPROM Operations:** Demonstrations of reading from and writing to the internal EEPROM.
 -   **LCD/Seven-Segment Displays:** Interfacing with various display technologies.
 -   **Sensor Interfacing:** Examples of connecting and reading data from different sensors.
+
+---
+
+## Project List
+
+This section provides a declaration and brief overview of each individual project or assignment included in this repository. Each project resides in its own dedicated folder.
+
+---
+
+### **1. Project Name (e.g., `01_GPIO_LED_Blink`)**
+* **Purpose:** A foundational project demonstrating basic General Purpose Input/Output (GPIO) control by toggling an LED on and off. It serves as a "Hello World" for the ATmega32.
+* **Key Concepts:** Digital output, delays, basic microcontroller programming structure.
+* **Folder:** `01_GPIO_LED_Blink/` (or similar)
+* **Status:** Complete / In Progress (Optional)
+
+---
+
+### **2. Project Name (e.g., `02_UART_Echo`)**
+* **Purpose:** Implements Universal Asynchronous Receiver-Transmitter (UART) communication, allowing the ATmega32 to receive characters from a serial terminal and echo them back.
+* **Key Concepts:** Serial communication, baud rate configuration, transmit and receive buffers.
+* **Folder:** `02_UART_Echo/` (or similar)
+* **Status:** Complete / In Progress (Optional)
+
+---
+
+### **3. Project Name (e.g., `03_ADC_Temperature_Sensor`)**
+* **Purpose:** Demonstrates the use of the Analog-to-Digital Converter (ADC) to read analog voltage from a temperature sensor (e.g., LM35) and convert it into a digital value, possibly displaying it on an LCD or sending it via UART.
+* **Key Concepts:** Analog-to-digital conversion, voltage reference, single conversion mode, sensor interfacing.
+* **Folder:** `03_ADC_Temperature_Sensor/` (or similar)
+* **Status:** Complete / In Progress (Optional)
+
+---
+
+**[Add more project declarations here following the same format]**
+
+*(Please replace the example project names, purposes, key concepts, folder names, and status with the actual details of your projects.)*
+
+---
+
+## Demos & Screenshots
+
+Here, you'll find animated GIFs or screenshots demonstrating key functionalities of the projects within this repository. Seeing is believing!
+
+---
+
+#### **Project 1: Blinking LED**
+*A simple demonstration of GPIO control, toggling an LED on and off.*
+![Blinking LED Demo](https://via.placeholder.com/400x200?text=Blinking+LED+GIF+Here)
+*(Replace the placeholder above with your actual GIF link)*
+
+---
+
+#### **Project 2: LCD Display Interfacing**
+*Illustrates how to send custom text to a 16x2 LCD module.*
+![LCD Display Demo](https://via.placeholder.com/400x200?text=LCD+Display+GIF+Here)
+*(Replace the placeholder above with your actual GIF link)*
+
+---
+
+#### **Project 3: PWM Motor Control**
+*Shows variable speed control of a DC motor using Pulse Width Modulation.*
+![PWM Motor Control Demo](https://via.placeholder.com/400x200?text=PWM+Motor+Control+GIF+Here)
+*(Replace the placeholder above with your actual GIF link)*
+
+---
 
 ## Getting Started
 
@@ -60,6 +131,8 @@ To get started with these projects, you will need the necessary hardware and sof
     -   **Make:** A build automation tool.
     -   **AVRDude:** For flashing compiled code to the microcontroller.
 
+---
+
 ## Usage
 
 Each project within this repository will typically have its own dedicated folder containing:
@@ -84,6 +157,8 @@ To build and flash a project:
 
 Refer to the individual project folders for detailed instructions and explanations.
 
+---
+
 ## Contributing
 
 Contributions are welcome! If you have projects, bug fixes, or improvements related to the ATmega32, please feel free to:
@@ -97,9 +172,13 @@ Contributions are welcome! If you have projects, bug fixes, or improvements rela
 
 Please ensure your code adheres to good practices and includes appropriate documentation.
 
+---
+
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## Contact
 
