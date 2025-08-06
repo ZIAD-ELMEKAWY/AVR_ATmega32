@@ -1,7 +1,7 @@
 /*
  * @name 	EXTI_interface.h
  * @date  	Created on: 23/7/2025
- * @author  Ziad Elmekawy
+ * @author  	Ziad Elmekawy
  */
 
 
@@ -42,3 +42,4 @@ u8 EXTI_u8Int0SetCallBack(void(*Copy_pvInt0Func)(void));
 void EXTI_voidEnableDisable(u8 copy_u8_EXTI_INTNum_e,u8 copy_u8EXTI_MODE_e);
 void EXTI_voidSetSenstivity(u8 copy_u8_EXTI_INTNum_e,u8 copy_EXTI_SENSTIVITY_e);
 #endif /* EXTI_EXTI_INTERFACE_H_ */
+
