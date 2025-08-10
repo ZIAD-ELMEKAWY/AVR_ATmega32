@@ -18,8 +18,8 @@ int lcdRows = 2;
 LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 HardwareSerial SerialPort(2);
 
-char ssid[] = "Elmekawy";
-char pass[] = "Llgh234@#$*";
+char ssid[] = "WIFI_SSID";
+char pass[] = "WIFI_PASSWORD";
 #define RX2   16
 #define TX2   17
 int valueFromBlynkv3 = 0;
